@@ -1,39 +1,52 @@
 # Spotify-Data-Analysis
 
-This project was undertaken to analyze and determine most popular songs, least popular songs etc. on spotify using python.
+This project was undertaken to analyze spotify track dataset using python.
 
 ## Project Steps
 
 ### Step 1 - Data Collection
 
 *I collected the dataset from kaggle.
-*I derived basic information from the above collected data using the .info() and .head() methods to help understand what I'm dealing with.
+
+*I imported the dataset using the pd.read_csv method.
 
 ### Step2 - Data Cleaning and Exploratory Data Analysis
 
-I derived basic information from the above collected data using the .info() and .head() methods to help understand what I'm dealing with.
-*I renamed the covid data column and Covid_Recovered_Cases columns, reshaped the DataFrame and added a new column.
-*I inspected and converted date object to DateTime format.
-*I reset the Covid_Recovered_Cases columns index and retrieved the country Nigeria using the .loc() method.
-*I wrote a functions to rename columns, replace subregion Nan with empty space, to reshape the data so that the dates (which are columns in the original data) will be transposed into values, reorder columns and sort rows, to get and clean up the covid-19 datasets.
-*I confirmed the length of  functions returned dataset and dropped unnecessary columns.
-*I merged certain columns usiung specific columns, using the .melt() method.
-*I examined variables: confirmed, dead and recovered.
-*I examined missing values and created DataFrame for confirmed, recovered and dead variables.
+*I derived basic information from the above collected data using the .info() and .head() methods.
+
+*I checked for null values.
+
+*I inspected the dataset for basic information using the .info() and .describe() methods.
+
+*I checked for the least popular songs.
+
+*I checked the dataset description using the describe().transpose method.
+
+*I checked for the most popular songs.
+
+*I set release date as index.
+
+*I located an artiste using the .iloc method.
+
+*I inspected the duration column using the .head() method.
+
+*I sampled the dataset.
+
+*I converted date column to datetime format.
+
+*I imported the second dataset.
+
+*I derived basic information from the above collected data using the .info() and .head() methods.
 
 
 ### Step3 - Data Visualization
 
-*I visualized Nigeria's top 10 states with infections: confirmed, death and discharged cases.
-*I plotted a line graph to visualise the number of confirmed. eath and dischrged cases amongst people.
-*I assigned a  new cases column to the covid DataFrame and visualised the amount of new cases.
-*I visualized the amount of new cases with repective dates.
-*I merged the covid_data dataframe and the covid_external dataframe to external_data using the .melt() method with states and visualized two columns in a single chart to weigh covid-19 effects on different areas.
-*I visualized a regression plot(regplot) between confirmed cases ans the population index to understand what percentage of the population had been confirmed to have the virus.
-*I visualized more charts between columns from the external_data.
-*I reshaped the realGDP dataframe using the .melt() method to make it easier to visualize the respective years and quaters on subplots wich I later visualized.
-*I compared the different initial budgets to the revised budgets caused by covid-19 within a few Nigerian States
+*I plotted a correlation between variable using heatmap visualization.
 
-### Suggestions on future work/Improvement plans
+*I plotted a regression plot between loudness and energy.
 
-*I would love to compare the effects of covid-19 cases in Nigeria to that of other countries and see how it affects the livelihood of people and the economy of nations.
+*I plotted a regression plot between popularity and acousticness.
+
+*I plotted the number of songs per year using a histplot.
+
+*I ploted the top 5 genres by popularity in the second dataset on a barplot.
